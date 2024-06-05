@@ -1,5 +1,5 @@
    <!-- foot -->
-   <div class="hm-7 mt-5 vh-55 df dfc jcc aic footer-bg">
+   <div class="hm-7 vh-55 df dfc jcc aic footer-bg">
     <div class="container">
         <div class="row">
             <div class="col-md-5">
@@ -11,7 +11,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-10 offset-md-2">
-                            <h1 class="display-4 l" id="Date-Time"></h1>
+                            <h1 class="display-4 text-secondary" id="Date-Time"></h1>
                         </div>
                     </div>
                     <div class="row">
@@ -24,6 +24,19 @@
                     <div class="row">
                         <div class="col-md-10 offset-md-2">
                             <a href="#" class="btn btn-outline-light">Join Us</a>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-9 offset-md-2">
+                            <p class="text-light">Follow us on: &nbsp;&nbsp;&nbsp;
+                                <a href="#" class="text-light me-3"><i class="uil uil-facebook-f fs-3"></i></a>
+                                <a href="#" class="text-light me-3"><i class="uil uil-twitter fs-3"></i></a>
+                                <a href="#" class="text-light me-3"><i class="uil uil-instagram fs-3"></i></a>
+                                <a href="#" class="text-light me-3"><i class="uil uil-youtube fs-3"></i></a>
+                                <a href="#" class="text-light me-3"><i class="uil uil-linkedin fs-3"></i></a>
+                                
+                            </p>
+                            
                         </div>
                     </div>
                 </div>
@@ -51,6 +64,17 @@
 </script>
 
 
+<script>
+    document.addEventListener('scroll', () => {
+        const navbar = document.getElementById('boss_navbar');
+        if (window.scrollY === 0) {
+            navbar.className = 'navbar navbar-dark navbar-expand-lg bgd fixed-top bs';
+        } else {
+            navbar.className = 'navbar navbar-expand-lg bg-body-tertiary fixed-top bs';
+        }
+    });
+</script>
+
 <!-- Foot end -->
 
 
@@ -71,7 +95,7 @@
 
 {{-- For the footer clock --}}
 
-{{-- <script>
+<script>
     async function fetchUserTimezone() {
         try {
             // Using a public API to fetch the user's IP information
@@ -97,10 +121,17 @@
     }
 
     function formatTime(date) {
-        const hours = date.getHours().toString().padStart(2, '0');
-        const minutes = date.getMinutes().toString().padStart(2, '0');
-        const seconds = date.getSeconds().toString().padStart(2, '0');
-        return `${hours}:${minutes}:${seconds}`;
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        let ampm = hours >= 12 ? 'PM' : 'AM';
+        
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+        minutes = minutes < 10 ? '0'+minutes : minutes;
+        seconds = seconds < 10 ? '0'+seconds : seconds;
+        
+        return `${hours}:${minutes}:${seconds} ${ampm}`;
     }
 
     async function updateTime() {
@@ -114,7 +145,7 @@
 
     // Initialize the time display
     updateTime();
-</script> --}}
+</script>
 
 <script>
     document.getElementById('year').innerText = new Date().getFullYear();

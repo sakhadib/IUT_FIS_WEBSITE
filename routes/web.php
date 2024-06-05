@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\home_Controller;
+use App\Http\Controllers\announcement_Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,12 @@ use App\Http\Controllers\home_Controller;
 
 
 Route::get('/', [home_Controller::class, 'index']);
+
+Route::get('/announcements', [announcement_Controller::class, 'index']);
+
+
+
+// fallback
+Route::fallback(function(){
+    return view('404');
+});

@@ -19,7 +19,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-dark navbar-expand-lg bgd fixed-top bs">
+    <nav class="navbar navbar-dark navbar-expand-lg bgd fixed-top bs" id="boss_navbar">
         <div class="container">
           <a class="navbar-brand" href="#" style="font-family: poppins, sans-sherif">IUT FIS</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,10 +28,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Announcements</a>
+                <a class="nav-link" href="/announcements">Announcements</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Activities</a>
@@ -57,6 +57,12 @@
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
               </li> --}}
             </ul>
+
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+            </ul>
             
           </div>
         </div>
@@ -64,7 +70,12 @@
 
       <style>
         .bgd{
-          background-color: rgba(0, 14, 24, 0.33)
+          background-color: rgba(0, 14, 24, 0.7);
+          transition: background-color ease-in-out 0.3s;
+        }
+
+        .bg-body-tertiary{
+          transition: background-color ease-in-out 0.3s;
         }
       </style>
     
