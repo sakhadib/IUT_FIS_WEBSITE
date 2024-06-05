@@ -44,10 +44,10 @@ class announcement_Controller extends Controller
     public function show($id){
         $announcement = Announcement::where('id', $id)->first();
 
-        return view('announcement',
-            [
-                'announcement' => $announcement
-            ]
-        );
+        if(!$announcement){
+            return redirect('/404');
+        }
+
+        return view('ind_announcement', ['announcement' => $announcement]);
     }
 }

@@ -59,9 +59,9 @@
   </style>
 
 
-<script>
+{{-- <script>
     new DataTable('#stable');
-</script>
+</script> --}}
 
 
 <script>
