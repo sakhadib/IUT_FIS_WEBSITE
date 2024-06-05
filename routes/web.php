@@ -20,6 +20,8 @@ use App\Http\Controllers\announcement_Controller;
 Route::get('/', [home_Controller::class, 'index']);
 
 Route::get('/announcements', [announcement_Controller::class, 'index']);
+Route::post('/announcements', [announcement_Controller::class, 'dateFilter']);
+Route::get('/announcements/{id}', [announcement_Controller::class, 'show']);
 
 
 

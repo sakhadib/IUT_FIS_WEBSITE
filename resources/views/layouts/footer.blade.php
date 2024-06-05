@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-5">
                 <img src="{{url('rsx/logo.svg')}}" alt="" style="width: 300px">
-                <h1 class="display-4 l">IUT Al-Fazari Interstellar Society</h1>
+                <h1 class="display-4 l mt-3">IUT Al-Fazari Interstellar Society</h1>
                 <p class="text-light lead"> #LookUpToWonder</p>
             </div>
             <div class="col-md-7 df dfc jcc">
@@ -70,7 +70,7 @@
         if (window.scrollY === 0) {
             navbar.className = 'navbar navbar-dark navbar-expand-lg bgd fixed-top bs';
         } else {
-            navbar.className = 'navbar navbar-expand-lg bg-body-tertiary fixed-top bs';
+            navbar.className = 'navbar navbar-dark navbar-expand-lg bg-dark fixed-top bs';
         }
     });
 </script>
@@ -95,7 +95,7 @@
 
 {{-- For the footer clock --}}
 
-<script>
+{{-- <script>
     async function fetchUserTimezone() {
         try {
             // Using a public API to fetch the user's IP information
@@ -145,7 +145,7 @@
 
     // Initialize the time display
     updateTime();
-</script>
+</script> --}}
 
 <script>
     document.getElementById('year').innerText = new Date().getFullYear();
