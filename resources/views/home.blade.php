@@ -30,7 +30,7 @@
                             <div class="col-8">
                                 <p class="fs-5">{{$ann_1_date}}</p>
                                 <p class="lead">{{$ann_1_content}}</p>
-                                <a href="/announcement/{{$ann_1_id}}" class="link-l">Read More...</a>
+                                <a href="/announcements/{{$ann_1_id}}" class="link-l">Read More...</a>
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                             <div class="col-8">
                                 <p class="fs-5">{{$ann_2_date}}</p>
                                 <p class="lead">{{$ann_2_content}}</p>
-                                <a href="/announcement/{{$ann_2_id}}" class="link-l">Read More...</a>
+                                <a href="/announcements/{{$ann_2_id}}" class="link-l">Read More...</a>
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                             <div class="col-8">
                                 <p class="fs-5">{{$ann_3_date}}</p>
                                 <p class="lead">{{$ann_3_content}}</p>
-                                <a href="/announcement/{{$ann_3_id}}" class="link-l">Read More...</a>
+                                <a href="/announcements/{{$ann_3_id}}" class="link-l">Read More...</a>
                             </div>
                         </div>
                     </div>

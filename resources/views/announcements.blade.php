@@ -18,11 +18,10 @@
                                     </div>
                                 </div>
                                 <div class="col-4 df aife">
-                                    <button type="submit" class="btn btn-outline-light">Submit</button>
+                                    <button type="submit" class="btn btn-outline-light"> Go <i class="uil uil-angle-double-right"></i></button>
                                 </div>
                             </div>
                         </div>                    
-                          
                     </form>
                 </div>
             </div>
@@ -43,10 +42,10 @@
                             @foreach($announcements as $announcement)
                             <div class="col-md-4 mt-4">
                                 <div class="card">
-                                    <div class="card-body">
-                                      <h5 class="card-title">{{date('j F Y', strtotime($announcement->created_at))}}</h5>
-                                    <p class="card-text">{{ substr($announcement->content, 0, 80) }}</p>
-                                      <a href="/announcements/{{$announcement->id}}" class="btn btn-outline-dark">Show Details</a>
+                                    <div class="card-body df dfc">
+                                        <h5 class="card-title">{{date('j F Y', strtotime($announcement->created_at))}}</h5>
+                                        <p class="card-text">{{ substr($announcement->content, 0, 80) }} ...</p>
+                                        <a href="/announcements/{{$announcement->id}}" class="btn btn-outline-dark asfe">Show Details</a>
                                     </div>
                                 </div>
                             </div>

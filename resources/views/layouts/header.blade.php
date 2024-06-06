@@ -34,6 +34,9 @@
                 <a class="nav-link" href="/announcements">Announcements</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="/news">News</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#">Activities</a>
               </li>
               <li class="nav-item">
