@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\home_Controller;
 use App\Http\Controllers\announcement_Controller;
 use App\Http\Controllers\news_Controller;
+use App\Http\Controllers\activity_Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,8 @@ Route::get('/news/{id}', [news_Controller::class, 'show']);
 Route::post('/news', [news_Controller::class, 'dateFilter']);
 Route::get('/allnews', [news_Controller::class, 'allnews']);
 
+Route::get('/activities', [activity_Controller::class, 'index']);
+Route::get('/activity/{id}', [activity_Controller::class, 'show']);
 
 
 // fallback

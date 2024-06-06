@@ -37,7 +37,7 @@
                 <a class="nav-link" href="/news">News</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Activities</a>
+                <a class="nav-link" href="/activities">Activities</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Executives</a>
