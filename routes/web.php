@@ -6,6 +6,7 @@ use App\Http\Controllers\home_Controller;
 use App\Http\Controllers\announcement_Controller;
 use App\Http\Controllers\news_Controller;
 use App\Http\Controllers\activity_Controller;
+use App\Http\Controllers\workshop_Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,14 @@ Route::get('/allnews', [news_Controller::class, 'allnews']);
 
 Route::get('/activities', [activity_Controller::class, 'index']);
 Route::get('/activity/{id}', [activity_Controller::class, 'show']);
+
+Route::get('/workshop', [workshop_Controller::class, 'index']);
+Route::get('/workshops/iut/prev', [workshop_Controller::class, 'iutprev']);
+Route::get('/workshops/out/prev', [workshop_Controller::class, 'outprev']);
+Route::get('/workshops/iut', [workshop_Controller::class, 'iut']);
+Route::get('/workshops/out', [workshop_Controller::class, 'out']);
+Route::get('/workshops/all', [workshop_Controller::class, 'all']);
+Route::get('workshop/{id}', [workshop_Controller::class, 'show']);
 
 
 // fallback
