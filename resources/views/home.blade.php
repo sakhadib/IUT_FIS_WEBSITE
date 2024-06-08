@@ -132,7 +132,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5 df dfc jcc aic mt-5 mt-md-0">
-                    <img src="{{$president->image_url}}" class="president_image" alt="">
+                    <img src="/storage/{{$president->image_url}}" class="president_image" alt="">
                     <h1 class="display-6 text-light mt-3">{{$president->name}}</h1>
                     <p class="fs-2 text-light"> president</p>
                 </div>

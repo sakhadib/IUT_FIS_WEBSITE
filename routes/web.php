@@ -7,6 +7,7 @@ use App\Http\Controllers\announcement_Controller;
 use App\Http\Controllers\news_Controller;
 use App\Http\Controllers\activity_Controller;
 use App\Http\Controllers\workshop_Controller;
+use App\Http\Controllers\login_Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,12 @@ Route::get('/workshops/iut', [workshop_Controller::class, 'iut']);
 Route::get('/workshops/out', [workshop_Controller::class, 'out']);
 Route::get('/workshops/all', [workshop_Controller::class, 'all']);
 Route::get('workshop/{id}', [workshop_Controller::class, 'show']);
+
+Route::get('/login', [login_Controller::class, 'index']);
+Route::post('/login', [login_Controller::class, 'login']);
+Route::post('/change_password', [login_Controller::class, 'changePassword']);
+
+Route::get('/logout', [login_Controller::class, 'logout']);
 
 
 // fallback

@@ -9,7 +9,7 @@
                 <h1 class="fs-5 text-secondary mt-4 text-center">
                     {{date('j F Y \a\t g:i A', strtotime($news->created_at))}} &nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href="/profile/{{$member->id}}" class="link-unstyled link-secondary">
-                        <img src="/{{$member->image_url}}" alt="" class="profile_picture">
+                        <img src="/storage/{{$member->image_url}}" alt="" class="profile_picture">
                         {{$member->name}} 
                     </a>
                 </h1>

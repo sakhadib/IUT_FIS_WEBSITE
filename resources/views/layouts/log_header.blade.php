@@ -19,42 +19,34 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-dark navbar-expand-lg bgd fixed-top bs" id="boss_navbar">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top bs">
         <div class="container">
-          <a class="navbar-brand" href="/" style="font-family: poppins, sans-sherif"><img src="/rsx/logo.svg" alt="" style="width: 80px; margin-top:-5px"></a>
+          <a class="navbar-brand" href="/" style="font-family: poppins, sans-sherif"><img src="/rsx/logo.svg" alt="" style="width: 80px; margin-top:-5px"> Admin</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/">Home</a>
+                <a class="nav-link" aria-current="page" href="/dashboard">Dashboard</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/announcements">Announcements</a>
+                <a class="nav-link" href="/announcementmanager"><i class="uil uil-pen"></i> Announcements</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/workshop">Workshops</a>
+                <a class="nav-link" href="/newsmanager"><i class="uil uil-pen"></i> News</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/news">News</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/activities">Activities</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Executives</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="/activitiesmanager"><i class="uil uil-pen"></i> Activities</a>
               </li>
               {{-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Workshops
+                  <i class="uil uil-pen"></i>  Create
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="/createnews">News</a></li>
+                  <li><a class="dropdown-item" href="/createannouncement">Announcement</a></li>
+                  <li><a class="dropdown-item" href="/createannouncement">Announcement</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
@@ -68,7 +60,7 @@
 
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/logout">Logout</a>
               </li>
             </ul>
             
