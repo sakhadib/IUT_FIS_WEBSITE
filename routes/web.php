@@ -53,6 +53,13 @@ Route::get('/logout', [login_Controller::class, 'logout']);
 Route::get('/dashboard', [dashboard_Controller::class, 'index']);
 
 
+
+// Admin Routes
+Route::get('/allnewsadmin', [news_Controller::class, 'allnewsadmin']);
+Route::get('/createnews', [news_Controller::class, 'create']);
+Route::post('/createnews', [news_Controller::class, 'store']);
+
+
 // fallback
 Route::fallback(function(){
     return view('404');

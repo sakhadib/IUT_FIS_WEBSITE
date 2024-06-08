@@ -63,4 +63,51 @@ class news_Controller extends Controller
             'news' => $news,
         ]);
     }
+
+
+    public function allnewsadmin()
+    {
+
+        if(session('is_logged_in') == false){
+            return redirect('/login');
+        }
+
+        $news = News::orderBy('created_at', 'desc')->get();
+        return view('admin.allnews',
+        [
+            'news' => $news,
+        ]);
+    }
+
+
+    public function create()
+    {
+        if(session('is_logged_in') == false){
+            return redirect('/login');
+        }
+
+        return view('admin.newsform');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+            'link' => 'required'
+        ]);
+         
+        if(session('is_logged_in') == false){
+            return redirect('/login');
+        }
+
+        $news = new News;
+        $news->title = $request->input('title');
+        $news->content = $request->input('content');
+        $news->news_link = $request->input('link');
+        $news->reporter_id = session('reporter_id');
+        $news->save();
+
+        return redirect('/allnewsadmin');
+    }
 }

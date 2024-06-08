@@ -54,7 +54,71 @@
 
   <style>
     .footer-bg{
-      background-color: rgba(0, 14, 24, 1)
+      background-color: rgba(0, 14, 24, 1);
+    }
+
+    .table-holder{
+        background-color: white;
+        padding: 35px;
+        border-radius: 10px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .ad-main-bg{
+        background-color: rgba(0, 14, 24, .7);
+        backdrop-filter: blur(4px);
+        border-bottom: 15px solid rgba(255, 255, 255, 0.109);
+    }
+
+    .the-ad-section{
+        min-height: 80vh;
+    }
+
+    .form-holder{
+        background-color: white;
+        padding: 35px;
+        border-radius: 10px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .custom_form_title{
+        font-size: 40px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .custom_form_title:focus{
+        border: 0;
+        box-shadow: 0 0 30px rgba(81, 191, 255, 0.5);
+    }
+
+    .custom_form_content{
+        font-size: 20px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .custom_form_content:focus{
+        border: 0;
+        box-shadow: 0 0 30px rgba(81, 191, 255, 0.5);
+    }
+
+    .custom_form_normal{
+        font-size: 20px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .custom_form_normal:focus{
+        border: 0;
+        box-shadow: 0 0 30px rgba(81, 191, 255, 0.5);
+    }
+
+    .custom_form_btn{
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        width: 100%;
     }
   </style>
 
@@ -73,6 +137,35 @@
             navbar.className = 'navbar navbar-dark navbar-expand-lg bg-dark fixed-top bs';
         }
     });
+</script>
+
+
+<script>
+    // Function to update MathJax rendering and display line breaks
+    function updateMathPreview() {
+        // Get references to the textarea and the preview element
+        const typedMath = document.getElementById('content');
+        const mathPreview = document.getElementById('the_content');
+
+        // Replace newline characters with HTML line break elements
+        const contentWithLineBreaks = typedMath.value.replace(/\n/g, '<br>');
+
+        // Update the content of the preview element with the content of the textarea
+        mathPreview.innerHTML = contentWithLineBreaks;
+
+        // Update MathJax rendering
+        MathJax.texReset();
+        MathJax.typesetClear();
+        MathJax.typesetPromise([mathPreview]);
+    }
+
+    // Call the function when the document is fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        updateMathPreview();
+    });
+
+    // Add event listener to the textarea for input event
+    document.getElementById('content').addEventListener('input', updateMathPreview);
 </script>
 
 <!-- Foot end -->

@@ -102,7 +102,7 @@
                             </tbody>
                         </table>
 
-                        <a href="/allnews" class="btn btn-dark" style="width: 100%;">All News</a>
+                        <a href="/allnewsadmin" class="btn btn-dark" style="width: 100%;">All News</a>
                     </div>
                 </div>
                 <div class="col-md-4 mt-4">

@@ -16,12 +16,23 @@
     {{-- icons --}}
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
+    {{-- Data Table --}}
+    <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script defer src="{{url('css/dt.js')}}"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+
+    {{-- Math --}}
+    <script defer type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+
+
 </head>
 <body>
 
     <nav class="navbar navbar-dark navbar-expand-lg bgd fixed-top bs" id="boss_navbar">
         <div class="container">
-          <a class="navbar-brand" href="/" style="font-family: poppins, sans-sherif"><img src="/rsx/logo.svg" alt="" style="width: 80px; margin-top:-5px"> Admin</a>
+          <a class="navbar-brand" href="/" style="font-family: poppins, sans-sherif"><img src="/rsx/logo.svg" alt="" style="width: 80px; margin-top:-5px"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -31,13 +42,13 @@
                 <a class="nav-link" aria-current="page" href="/dashboard">Dashboard</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/announcementmanager"><i class="uil uil-pen"></i> Announcements</a>
+                <a class="nav-link" href="/allann">Announcements</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/newsmanager"><i class="uil uil-pen"></i> News</a>
+                <a class="nav-link" href="/allnewsadmin">News</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/activitiesmanager"><i class="uil uil-pen"></i> Activities</a>
+                <a class="nav-link" href="/allactivity">Activities</a>
               </li>
               {{-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,6 +82,7 @@
       <style>
         .bgd{
           background-color: rgba(0, 14, 24, 0.5);
+          backdrop-filter: blur(4px);
           transition: background-color ease-in-out 0.3s;
         }
 
