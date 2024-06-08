@@ -40,28 +40,24 @@
                             <tbody>
                                 <tr>
                                     <td>Total</td>
-                                    <td>50</td>
-                                </tr>
-                                <tr>
-                                    <td>By Me</td>
-                                    <td>20</td>
+                                    <td>{{$TotalNumberOfAnnouncements}}</td>
                                 </tr>
                                 <tr>
                                     <td>Today</td>
-                                    <td>2</td>
+                                    <td>{{$TotalAnnCreated_atToday}}</td>
                                 </tr>
                                 <tr>
                                     <td>This Month</td>
-                                    <td>10</td>
+                                    <td>{{$TotalAnnCreated_atThisMonth}}</td>
                                 </tr>
                                 <tr>
                                     <td>Last</td>
-                                    <td><a href="" class="link-l">View</a></td>
+                                    <td><a href="/announcements/{{$LastCreatedAnnouncement->id}}" class="link-l">View</a></td>
                                 </tr>
                             </tbody>
                         </table>
 
-                        <a href="#" class="btn btn-dark" style="width: 100%;">All Announcements</a>
+                        <a href="/allann" class="btn btn-dark" style="width: 100%;">All Announcements</a>
                     </div>
                 </div>
                 <div class="col-md-4 mt-4">
@@ -89,28 +85,24 @@
                             <tbody>
                                 <tr>
                                     <td>Total</td>
-                                    <td>50</td>
-                                </tr>
-                                <tr>
-                                    <td>By Me</td>
-                                    <td>20</td>
+                                    <td>{{$TotalNumberOfNews}}</td>
                                 </tr>
                                 <tr>
                                     <td>Today</td>
-                                    <td>2</td>
+                                    <td>{{$TotalNewsCreated_atToday}}</td>
                                 </tr>
                                 <tr>
                                     <td>This Month</td>
-                                    <td>10</td>
+                                    <td>{{$TotalNewsCreated_atThisMonth}}</td>
                                 </tr>
                                 <tr>
                                     <td>Last</td>
-                                    <td><a href="" class="link-l">View</a></td>
+                                    <td><a href="/news/{{$LastCreatedNews->id}}" class="link-l">View</a></td>
                                 </tr>
                             </tbody>
                         </table>
 
-                        <a href="#" class="btn btn-dark" style="width: 100%;">All News</a>
+                        <a href="/allnews" class="btn btn-dark" style="width: 100%;">All News</a>
                     </div>
                 </div>
                 <div class="col-md-4 mt-4">
@@ -138,27 +130,23 @@
                             <tbody>
                                 <tr>
                                     <td>Total</td>
-                                    <td>50</td>
-                                </tr>
-                                <tr>
-                                    <td>By Me</td>
-                                    <td>20</td>
+                                    <td>{{$TotalNumberOfActivity}}</td>
                                 </tr>
                                 <tr>
                                     <td>Today</td>
-                                    <td>2</td>
+                                    <td>{{$TotalActivityCreated_atToday}}</td>
                                 </tr>
                                 <tr>
                                     <td>This Month</td>
-                                    <td>10</td>
+                                    <td>{{$TotalActivityCreated_atThisMonth}}</td>
                                 </tr>
                                 <tr>
                                     <td>Last</td>
-                                    <td><a href="" class="link-l">View</a></td>
+                                    <td><a href="/activity/{{$LastCreatedActivity->id}}" class="link-l">View</a></td>
                                 </tr>
                             </tbody>
                         </table>
-                        <a href="#" class="btn btn-dark" style="width: 100%;">All Activities</a>
+                        <a href="/allactivity" class="btn btn-dark" style="width: 100%;">All Activities</a>
                     </div>
                 </div>
             </div>
