@@ -8,6 +8,9 @@ class dashboard_Controller extends Controller
 {
     public function index()
     {
-        return view('dashboard');
+        if(session('is_logged_in') == true){
+            return view('dashboard');
+        }
+        return redirect('/login');
     }
 }

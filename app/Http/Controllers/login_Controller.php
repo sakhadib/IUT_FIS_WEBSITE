@@ -35,7 +35,7 @@ class login_Controller extends Controller
             session(['reporter_id' => $reporter->id,
                      'member_id' => $member->id,
                     'is_logged_in' => true]);
-            return redirect('/');
+            return redirect('/dashboard');
         }
     }
 
