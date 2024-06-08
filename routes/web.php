@@ -8,6 +8,7 @@ use App\Http\Controllers\news_Controller;
 use App\Http\Controllers\activity_Controller;
 use App\Http\Controllers\workshop_Controller;
 use App\Http\Controllers\login_Controller;
+use App\Http\Controllers\dashboard_Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,8 @@ Route::post('/login', [login_Controller::class, 'login']);
 Route::post('/change_password', [login_Controller::class, 'changePassword']);
 
 Route::get('/logout', [login_Controller::class, 'logout']);
+
+Route::get('/dashboard', [dashboard_Controller::class, 'index']);
 
 
 // fallback
