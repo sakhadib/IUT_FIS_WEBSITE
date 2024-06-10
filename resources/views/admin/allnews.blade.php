@@ -16,10 +16,10 @@
         </div>
     </div>
     <div class="df dfc jcc aic the-ad-section">
-        <div class="container table-holder">
+        <div class="container table-holder  mt-5 mb-5">
             <div class="row">
                 <div class="col-12">
-                    <table data-order='[[2, "desc"]]' data-page-length='25' id="stable" class="table table-hover table-striped table-responsive">
+                    <table data-order='[[0, "desc"]]' data-page-length='25' id="stable" class="table table-hover table-responsive">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -35,6 +35,7 @@
                                     <td>{{ $new->title }}</td>
                                     <td>{{ date('j F Y \a\t g:m A', strToTime($new->created_at)) }}</td>
                                     <td>
+                                        <a href="/news/{{ $new->id }}" class="btn btn-sm btn-outline-dark"><i class="uil uil-eye"></i></a>
                                         <a href="/editnews/{{ $new->id }}" class="btn btn-sm btn-outline-primary"><i class="uil uil-edit"></i> Edit</a>
                                         <a href="/deletenews/{{ $new->id }}" class="btn btn-sm btn-outline-danger" id=""><i class="uil uil-trash"></i> Delete</a>
                                     </td>

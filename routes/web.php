@@ -54,10 +54,16 @@ Route::get('/dashboard', [dashboard_Controller::class, 'index']);
 
 
 
-// Admin Routes
+// Admin Routes - News
 Route::get('/allnewsadmin', [news_Controller::class, 'allnewsadmin']);
 Route::get('/createnews', [news_Controller::class, 'create']);
 Route::post('/createnews', [news_Controller::class, 'store']);
+Route::get('/editnews/{id}', [news_Controller::class, 'edit']);
+Route::post('/editnews/{id}', [news_Controller::class, 'update']);
+Route::get('/deletenews/{id}', [news_Controller::class, 'destroy']);
+
+// Admin Routes - Announcements
+Route::get('/allannouncementsadmin', [announcement_Controller::class, 'allannouncementsadmin']);
 
 
 // fallback

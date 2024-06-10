@@ -110,4 +110,60 @@ class news_Controller extends Controller
 
         return redirect('/allnewsadmin');
     }
+
+    public function edit($id)
+    {
+        if(session('is_logged_in') == false){
+            return redirect('/login');
+        }
+
+        $news = News::find($id);
+
+        if(!$news){
+            return redirect('/404');
+        }
+
+        return view('admin.newsedit',
+        [
+            'news' => $news,
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+            'link' => 'required'
+        ]);
+
+        if(session('is_logged_in') == false){
+            return redirect('/login');
+        }
+
+        $news = News::find($id);
+        $news->title = $request->input('title');
+        $news->content = $request->input('content');
+        $news->news_link = $request->input('link');
+        $news->save();
+
+        return redirect('/allnewsadmin');
+    }
+
+    public function destroy($id)
+    {
+        if(session('is_logged_in') == false){
+            return redirect('/login');
+        }
+
+        $news = News::find($id);
+
+        if(!$news){
+            return redirect('/404');
+        }
+
+        $news->delete();
+
+        return redirect('/allnewsadmin');
+    }
 }
