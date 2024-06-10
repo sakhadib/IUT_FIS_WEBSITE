@@ -63,7 +63,7 @@ Route::post('/editnews/{id}', [news_Controller::class, 'update']);
 Route::get('/deletenews/{id}', [news_Controller::class, 'destroy']);
 
 // Admin Routes - Announcements
-Route::get('/allannouncementsadmin', [announcement_Controller::class, 'allannouncementsadmin']);
+Route::get('/allann', [announcement_Controller::class, 'allannouncementsadmin']);
 
 
 // fallback

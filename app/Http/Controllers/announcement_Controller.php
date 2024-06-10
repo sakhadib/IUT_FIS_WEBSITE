@@ -70,4 +70,32 @@ class announcement_Controller extends Controller
             'member' => $member
         ]);
     }
+
+
+    public function allannouncementsadmin(){
+        $announcements = Announcement::orderBy('created_at', 'desc')->get();
+
+        $modifiedObjectArray = [];
+
+        foreach($announcements as $announcement){
+            $executive = Executive::where('id', $announcement->on_behalf_of)->first();
+            $executive_member = Member::where('id', $executive->member_id)->first();
+            $member = Member::where('id', $announcement->admin_name)->first();
+
+            $modifiedObject = (object) [
+                'announcement' => $announcement,
+                'executive' => $executive,
+                'member' => $member,
+                'executive_member' => $executive_member
+            ];
+
+            array_push($modifiedObjectArray, $modifiedObject);
+        }
+
+        return view('admin.allannouncementsadmin',
+            [
+                'announcements' => $modifiedObjectArray
+            ]
+        );
+    }
 }
